@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="app, landing, corporate, Creative, Html Template, Template">
+    <meta name="author" content="web-themes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <!-- title -->
+    <title>Time counter section</title>
+
+    <!-- favicon -->
+    <!-- <link href="img/favicon.png" type="image/png" rel="icon"> -->
+
+    <!-- all css here -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+    
+    <div class="countdown_wrapper">
+        <div id="count_down"></div>
+    </div>
+
+
+    <!-- all js here -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script>
+        
+         //count down
+         $('#count_down').countdown('2023/11/12', function(event) {
+            $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
+            $(this).html(event.strftime('<div><span>%D</span><p>Days</p></div> <div><span>%H</span><p>Hours</p></div> <div><span>%M</span><p>Minutes</p></div> <div><span>%S</span><p>Seconds</p></div>'));
+         });
+
+    </script>
+</body>
+</html>
